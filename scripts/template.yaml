@@ -1,0 +1,11 @@
+VAR_USERS: 
+  - 
+    username: test
+    password: False
+    public_key: True
+    sudoer: True
+  -
+    username: user
+    password: True
+    public_key: False
+    sudoer: False

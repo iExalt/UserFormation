@@ -1,0 +1,14 @@
+- hosts: all
+  become: yes
+  become_user: root
+  gather_facts: no
+  vars_files:
+    - template.yaml
+    
+  vars:
+    var1: "test"
+  
+  
+  tasks:
+    - name: "ping test"
+      ping:
