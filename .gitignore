@@ -12,3 +12,5 @@
 ### Ansible ###
 *.retry
 
+### Startup Script ###
+start.sh
