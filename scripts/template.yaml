@@ -3,21 +3,16 @@ VAR_USERS:
     username: admin
     password: 
     public_key: ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDLQxMdvpmB85Uc7KCEWqN1bRHdrT2OtPcwn6gW3t+52juYU3CxqkXCTt/JBoZZEr77BQtFxrmkcZJvGBFfoeb6oMGN8E5cWnfHQGqdhFEnRyqtfah9JhZDbmzR33b84M4BG3Mltt6h4gckL2UxoLDCBHmJCUS1tIn+JSeQrcuADRdiyqp+TSS1HifrjTql0zrubgazZyFaI1hZzO+5ml3VcmyzEaTG+xx5rGDlSUHgyBOTQCqCXSp7NeloSKQ5t+ruq/o0DFvUDXdmi8YheU2C73cPLfyzXb0PHF+W1xSH1qqjIUuQWGdgq/kTRZnE/CHDNBq6YXmeIlJRSScXyoYV
-
     groups:
-      #- admin
       - sudo
   -
     username: user
     password: 
     public_key: ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDLQxMdvpmB85Uc7KCEWqN1bRHdrT2OtPcwn6gW3t+52juYU3CxqkXCTt/JBoZZEr77BQtFxrmkcZJvGBFfoeb6oMGN8E5cWnfHQGqdhFEnRyqtfah9JhZDbmzR33b84M4BG3Mltt6h4gckL2UxoLDCBHmJCUS1tIn+JSeQrcuADRdiyqp+TSS1HifrjTql0zrubgazZyFaI1hZzO+5ml3VcmyzEaTG+xx5rGDlSUHgyBOTQCqCXSp7NeloSKQ5t+ruq/o0DFvUDXdmi8YheU2C73cPLfyzXb0PHF+W1xSH1qqjIUuQWGdgq/kTRZnE/CHDNBq6YXmeIlJRSScXyoYV
-    groups:
-      - user
-      
+    groups:      
   -
     username: nossh
     password: $6$v.InCBmkh$.PVN/Pa3qkN0UIpssnDdlwEykkydtVwJjRSGifIisGbjLQDGn5J9P1WvTiAgYKLDuEZTH9ei3cD45NgQvZI3A.
     public_key:
     groups:
-      #- nossh
       - sudo
