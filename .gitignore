@@ -13,4 +13,4 @@
 *.retry
 
 ### Startup Script ###
-start.sh
+**/start.sh
