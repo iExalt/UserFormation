@@ -3,35 +3,14 @@
   become_user: root
   gather_facts: no
   vars_files:
-    - template.yaml
-    
+    - templates/template.yaml
+
   vars:
     var1: "test"
-  
-  
+
+
   tasks:
-    - name: ping test
-      ping:
-      
-      
-    #- name: "debug test"
-      #debug:
-        #var: item
-      #with_items: 
-        #- "{{ VAR_USERS }}"
-        
-    #- name: "print test"
-      #debug:
-        #msg: "{{ VAR_USERS[0].username }}"
-        
-    #- name: print test
-      #debug:
-        #msg: "{{ item }}"
-      #with_items:
-        #- "{{ VAR_USERS }}"
-      #loop_control:
-        #label: "{{ item }}"
-        
+
     - name: Add groups
       group:
         name: "{{ item.username }}"
@@ -40,7 +19,7 @@
         - "{{ VAR_USERS }}"
       loop_control:
         label: "{{ item.username }}"
-        
+
     - name: Add users
       user:
         name: "{{ item.username }}"
@@ -53,15 +32,15 @@
         - "{{ VAR_USERS }}"
       loop_control:
         label: "{{ item.username }}"
-        
-    - name: Lock passwords for users
+
+    - name: Lock passwords for users with no password
       shell: passwd -l {{ item.username }}
       with_items:
-        - "{{ VAR_USERS }}" 
+        - "{{ VAR_USERS }}"
       loop_control:
         label: "{{ item.username }}"
       when: item.password is none
-     
+
     - name: Add authorized_keys defined in template
       authorized_key:
         user: "{{ item.username }}"
